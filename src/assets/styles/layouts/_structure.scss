@@ -11,12 +11,20 @@
   margin: 0;
 }
 
+.fill-container {
+  width: 100%;
+}
+
 .col-layout-large{
   @include layout(column, 2rem);
 }
 
 .col-layout-medium{
   @include layout(column, 1rem);
+}
+
+.col-layout-small{
+  @include layout(column, 0.5rem);
 }
 
 //MAIN, HEADER, FOOTER
