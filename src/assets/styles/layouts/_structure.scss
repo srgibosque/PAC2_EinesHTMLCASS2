@@ -1,0 +1,101 @@
+@mixin layout($direction, $gap){
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  align-items: flex-start;
+}
+
+.container {
+  container-type: inline-size;
+  padding: 0;
+  margin: 0;
+}
+
+.col-layout-large{
+  @include layout(column, 2rem);
+}
+
+.col-layout-medium{
+  @include layout(column, 1rem);
+}
+
+//MAIN, HEADER, FOOTER
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 2rem;
+  align-items: center;
+
+  @media(min-width:1280px) {
+    max-width: 1280px;
+    margin: 5rem auto;
+  }
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+//NAVBAR
+.navbar-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar-links-layout {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.navbar-link-layout {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//CARDS
+.cards-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-layout {
+  flex: 1 1 100%;
+
+  @container (min-width: 768px) {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  @container (min-width: 1280px) {
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+}
+
+//ARTICLE
+//fallback if grid is not supported by the browser
+.two-columns {
+  display: block
+}
+
+@supports(display: grid) {
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @container (min-width: 768px) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
