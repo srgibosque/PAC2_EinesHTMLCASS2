@@ -1,12 +1,17 @@
-<div class="">
-  <h2>Contact us</h2>
-  <form class="fill-container">
-    
+<form name="contact" class="container fill-container" method="post" netlify>
+  <div class="two-columns">
+    <div class="mb-3">
+      <!-- <label for="name" class="form-label">Name</label> -->
+      <input type="text" class="form-control" id="name" placeholder="Enter your name">
+    </div>
+
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="Enter your email" aria-label="user email">
       <span class="input-group-text" id="basic-addon2">@gmail.com</span>
     </div>
-    
+  </div>
+
+  <div class="two-columns">
     <div class="mb-3">
       <select class="form-select">
         <option selected>Select the subject of your query</option>
@@ -15,13 +20,13 @@
         <option value="3">Three</option>
       </select>
     </div>
-    
+
     <div class="mb-3">
-      <label for="message" class="form-label">Example textarea</label>
-      <textarea class="form-control" id="message" rows="8"></textarea>
+      <textarea class="form-control" id="message" rows="8" placeholder="Enter your text"></textarea>
     </div>
-  
-    <button type="button" class="btn btn-primary">Submit</button>
-  
-  </form>
-</div>
+  </div>
+  <button type="submit" class="btn btn-primary one-third-container row-layout-small">
+    <i class="fa-solid fa-envelope"></i>
+    <p>Submit</p>
+  </button>
+</form>
