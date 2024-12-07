@@ -1,0 +1,25 @@
+{
+   "extends": [],
+   "rules": {
+      "no-duplicate-selectors": true,
+      "selector-type-case": "lower",
+      "function-name-case": "lower",
+      "value-keyword-case": "lower",
+      "declaration-empty-line-before": [
+         "never",
+         {
+            "ignore": ["after-comment", "inside-single-line-block"]
+
+         }
+      ],
+      "rule-empty-line-before": "always-multi-line",
+      "declaration-block-single-line-max-declarations": 1,
+      "alpha-value-notation": "number",
+      "function-disallowed-list": ["rgba", "hsla"],
+      "color-function-notation": "modern",
+      "color-hex-length": "short",
+      "length-zero-no-unit": true,
+      "selector-attribute-quotes": "always",
+      "selector-max-combinators": 1
+   }
+}

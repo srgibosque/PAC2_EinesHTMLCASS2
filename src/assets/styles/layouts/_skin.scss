@@ -1,12 +1,83 @@
-.test{
-  background-color: purple;
+@layer reset {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li {
+    list-style: none;
+  }
 }
 
-.test-container{
-  background-color: color(display-p3 0 0.33 0.99);
+@layer utilities {
+  @mixin inter($size, $weight) {
+    font-family: $font-family-sans-serif;
+    font-size: $size;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+  }
+
+  @mixin inconsolata($size, $weight) {
+    font-family: $font-family-monospace;
+    font-size: $size;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+  }
+
+  .inter-regular {
+    @include inter(1rem, 400);
+  }
+
+  .inconsolata-titles {
+    @include inconsolata(2rem, 400);
+  }
+
+  .inconsolata-regular {
+    @include inconsolata(1rem, 400);
+  }
 }
 
-.test-header{
-  background-color: lightblue;
+@layer layout {
+  body {
+    background: linear-gradient(180deg, #1C3146 0%, #07080D 100%);
+  }
 }
 
+@layer components {
+  // navbar
+  .navbar {
+    background: rgba($body-color, 0.05);
+    backdrop-filter: blur(12px);
+  }
+
+  header .navbar-item {
+    &:not(.active):hover {
+      background: rgba($body-color, 0.1); 
+    }
+  }
+
+  footer .navbar-item {
+    &:not(.active):hover {
+      font-weight: 600;
+    }
+  }
+
+  .active {
+    border-bottom: 4px solid $primary;
+    font-weight: 600;
+  }
+
+  //index-cards
+  .info-card {
+    background-color: #1E1E1E;
+    border-radius: 0.75rem;
+    border-top: 1.5rem solid #2D2D2D;
+    padding: 1rem;
+  }
+}
+
+// .test-container{
+//   background-color: color(display-p3 0 0.33 0.99);
+// }
