@@ -3,6 +3,8 @@
  * Do not include SCSS code in this file.
  */
 
+ @layer reset, libraries, utilities, layout, components, overrides;
+
 /**
  * Import variables
  */
@@ -17,9 +19,11 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
-@import "bootstrap/scss/bootstrap";
-@import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
+@layer libraries {
+  @import "bootstrap/scss/bootstrap";
+  // @import "../../../node_modules/bootstrap/scss/bootstrap";
+}
 
 
 /**
