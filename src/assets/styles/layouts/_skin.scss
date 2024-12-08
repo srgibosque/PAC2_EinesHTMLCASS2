@@ -30,12 +30,24 @@
     @include inter(1rem, 400);
   }
 
+  .inter-regular-big {
+    @include inter(1.25rem, 400);
+  }
+
+  .inter-title {
+    @include inter(1.5rem, 400);
+  }
+
   .inconsolata-titles {
     @include inconsolata(2rem, 400);
   }
 
   .inconsolata-regular {
     @include inconsolata(1rem, 400);
+  }
+
+  .inconsolata-regular-big {
+    @include inconsolata(1.25rem, 400);
   }
 
   .secondary-color {
@@ -114,6 +126,12 @@
     50% {
       border-color: transparent;
     }
+  }
+
+  //images
+  .image:has(+figcaption){
+    border: 1px solid $primary-enhanced;
+    border-radius: 1rem;
   }
 }
 
