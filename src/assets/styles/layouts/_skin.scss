@@ -37,11 +37,15 @@
   .inconsolata-regular {
     @include inconsolata(1rem, 400);
   }
+
+  .secondary-color {
+    color: rgba($body-color, 0.6);
+  }
 }
 
 @layer layout {
   body {
-    background: linear-gradient(180deg, #1C3146 0%, #07080D 100%);
+    background: linear-gradient(180deg, $bg-color-one 0%, $bg-color-two 100%);
   }
 }
 
@@ -54,7 +58,13 @@
 
   header .navbar-item {
     &:not(.active):hover {
-      background: rgba($body-color, 0.1); 
+      background: rgba($body-color, 0.1);
+    }
+  }
+
+  footer .navbar-item-icon {
+    &:hover {
+      fill: rgba($body-color, 0.6);
     }
   }
 
@@ -65,16 +75,45 @@
   }
 
   .active {
-    border-bottom: 4px solid $primary;
+    border-bottom: 4px solid $primary-enhanced;
     font-weight: 600;
+  }
+
+  //form-controls
+  option{
+    background-color: $bg-color-one;
   }
 
   //index-cards
   .info-card {
-    background-color: #1E1E1E;
+    background-color: $console-color-primary;
     border-radius: 0.75rem;
-    border-top: 1.5rem solid #2D2D2D;
+    border-top: 1.5rem solid $console-color-secondary;
     padding: 1rem;
+  }
+
+  .typewritter-effect {
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 8s steps(70) forwards, blink 1s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 }
 

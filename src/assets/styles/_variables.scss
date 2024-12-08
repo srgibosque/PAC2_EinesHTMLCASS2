@@ -1,10 +1,20 @@
 @use "sass:color";
 
+//Fonts
 $font-family-sans-serif: "Inter", sans-serif;
 $font-family-monospace: "Inconsolata", monospace;
 
+//Colors
+$bg-color-one:#1C3146;
+$bg-color-two:#07080D;
+$console-color-primary:#1E1E1E ;
+$console-color-secondary:#2D2D2D ;
+$primary-enhanced: color(display-p3 0 0.33 0.99);
 
-$largedesktops: 420px;
+//Breakpoints
+$medium-device-breakpoint: 680px;
+$large-device-breakpoint: 1080px;
+$extraLarge-device-breakpoint: 1280px;
 
 
 //BOOTSTRAP OVERRIDES
