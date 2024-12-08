@@ -172,7 +172,7 @@
   @supports(display: grid) {
 
     @container(min-width: #{$medium-device-breakpoint}) {
-      
+
       .index-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
