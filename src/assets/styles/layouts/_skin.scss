@@ -1,4 +1,5 @@
 @layer reset {
+
   a {
     text-decoration: none;
     color: inherit;
@@ -56,6 +57,7 @@
 }
 
 @layer layout {
+
   body {
     background: linear-gradient(180deg, $bg-color-one 0%, $bg-color-two 100%);
   }
@@ -69,18 +71,21 @@
   }
 
   header .navbar-item {
+
     &:not(.active):hover {
       background: rgba($body-color, 0.1);
     }
   }
 
   footer .navbar-item-icon {
+
     &:hover {
       fill: rgba($body-color, 0.6);
     }
   }
 
   footer .navbar-item {
+
     &:not(.active):hover {
       font-weight: 600;
     }
@@ -113,6 +118,7 @@
   }
 
   @keyframes typing {
+
     from {
       width: 0;
     }
@@ -123,6 +129,7 @@
   }
 
   @keyframes blink {
+    
     50% {
       border-color: transparent;
     }
@@ -134,7 +141,3 @@
     border-radius: 1rem;
   }
 }
-
-// .test-container{
-//   background-color: color(display-p3 0 0.33 0.99);
-// }
